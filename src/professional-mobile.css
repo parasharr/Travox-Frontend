@@ -1,0 +1,117 @@
+/* Mobile Filter Styles to be appended to user.css */
+
+/* Add padding to container on mobile */
+@media (max-width: 900px) {
+    .professional-page {
+        padding-top: 5px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .professional-container {
+        padding: 0 16px;
+    }
+
+    .services-topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .topbar-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Mobile Filter Toggle Button */
+.filter-toggle-btn {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .filter-toggle-btn {
+        display: flex;
+    }
+}
+
+/* Sidebar Drawer for Mobile */
+@media (max-width: 900px) {
+    .pro-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 280px !important;
+        z-index: 2000;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 0;
+        border-radius: 0;
+        border-right: 1px solid #e2e8f0;
+    }
+
+    .pro-sidebar.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Overlay */
+    .pro-sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        backdrop-filter: blur(2px);
+        animation: fadeIn 0.2s ease;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Close Button in Sidebar */
+.sidebar-mobile-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+@media (max-width: 900px) {
+    .sidebar-mobile-header {
+        display: flex;
+    }
+
+    /* Hide the original header if it duplicates or style differently */
+    .pro-sidebar .sidebar-header {
+        /* You might want to keep the original Clear All button, but adjust layout */
+    }
+}
+
+.close-sidebar-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px;
+}

@@ -1,0 +1,75 @@
+/* Responsive Styles for Booking Status Page */
+
+@media (max-width: 900px) {
+
+    /* 1. Layout: Stack Main Content and Timeline */
+    .bs-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* 2. Container Padding */
+    .bs-container {
+        padding: 20px 16px;
+    }
+
+    /* 3. Reorder Logic: Optional 
+       Usually Status/Stepper first (default order is correct)
+       Activity Timeline at bottom (default order is correct)
+    */
+
+    /* 4. Card Adjustments */
+    .bs-card {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 5. Stepper Adjustments for potentially very small screens */
+    @media (max-width: 480px) {
+        .bs-stepper-row {
+            /* If icons get too squashed, we can reduce font size or gap */
+            gap: 4px;
+        }
+
+        .bs-step-label {
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .bs-step-line {
+            margin: 0 4px;
+            margin-bottom: 24px;
+        }
+    }
+
+    /* 6. Payment Row Adjustments */
+    .bs-payment-row {
+        font-size: 13px;
+    }
+
+    /* 7. Action Buttons */
+    .bs-action-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bs-btn-primary,
+    .bs-btn-outline {
+        width: 100%;
+    }
+
+    /* 8. Header */
+    .bs-header {
+        margin-bottom: 20px;
+    }
+
+    .bs-title {
+        font-size: 20px;
+    }
+
+    .bs-subtitle {
+        font-size: 13px;
+    }
+}

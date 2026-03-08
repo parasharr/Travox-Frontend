@@ -1,0 +1,62 @@
+/* Responsive Styles for Service Details Page */
+
+@media (max-width: 1024px) {
+
+    /* Layout: Stack content and sidebar */
+    .sd-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* Adjust padding for container */
+    .service-details-container {
+        padding: 16px;
+    }
+
+    /* Left Content - Full Width */
+    .sd-main-content {
+        width: 100%;
+        order: 1;
+        /* Ensure it's first */
+    }
+
+    /* Right Sidebar - Full Width and Bottom */
+    .sd-sidebar {
+        width: 100%;
+        order: 2;
+        /* Ensure it's second */
+        margin-top: 0;
+    }
+
+    /* Reduce Banner Height */
+    .sd-banner {
+        height: 180px;
+    }
+
+    .sd-banner-icon {
+        font-size: 48px;
+    }
+
+    /* Header text sizes */
+    .sd-title {
+        font-size: 22px;
+    }
+
+    /* Provider Card Adjustments */
+    .sd-provider-card {
+        padding: 24px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ensure icons row doesn't overflow */
+    .sd-action-icons {
+        flex-wrap: wrap;
+    }
+
+    /* Reviews Grid if exists */
+    .sd-reviews-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,75 @@
+/* Responsive Styles for Payment Page */
+
+@media (max-width: 900px) {
+
+    /* 1. Layout: Stack columns vertically */
+    .payment-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* 2. Container Padding */
+    .payment-page-container {
+        padding: 24px 16px;
+    }
+
+    /* 3. Reorder Logic (Optional): Ensure Summary is first or last? 
+       Usually Summary first is good to know what you are paying for, 
+       but sometimes Payment Form first is preferred. 
+       Let's stick to default document order for now (Summary -> Payment).
+    */
+
+    /* 4. Payment Card padding reduction */
+    .payment-card {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 5. Progress Bar adjustments */
+    .pp-container {
+        margin-bottom: 30px;
+    }
+
+    .pp-wrapper {
+        max-width: 100%;
+        /* Ensure it fits */
+    }
+
+    .pp-label {
+        font-size: 11px;
+    }
+
+    .pp-line {
+        margin: 0 5px;
+    }
+
+    /* 6. Form adjustments */
+    .form-row {
+        flex-direction: row;
+        /* Keep expiry and cvc side-by-side if they fit, or stack them */
+        gap: 12px;
+    }
+
+    /* On very small screens, stack form rows */
+    @media (max-width: 400px) {
+        .form-row {
+            flex-direction: column;
+        }
+    }
+
+    .checkbox-row {
+        align-items: flex-start;
+    }
+
+    .checkbox-row input {
+        margin-top: 3px;
+    }
+
+    .ssl-secured {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}

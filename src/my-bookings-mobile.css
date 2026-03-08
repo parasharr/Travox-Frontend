@@ -1,0 +1,101 @@
+/* Responsive Styles for My Bookings Page */
+
+@media (max-width: 900px) {
+
+    /* 1. Stack the main two columns */
+    .mb-content-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* 2. Order content: Sidebar (Stats) at top, Bookings list below */
+    .mb-main-column {
+        order: 2;
+    }
+
+    .mb-sidebar-column {
+        order: 1;
+    }
+
+    /* 3. Header Controls Responsive */
+    .mb-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .mb-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        /* Scrollbar space if needed */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .mb-tabs::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .mb-tab-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .mb-controls-right {
+        flex-direction: column;
+    }
+
+    .mb-search-wrapper {
+        width: 100%;
+    }
+
+    .mb-filter-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 4. Booking Card Responsive (Stack internal content) */
+    .mb-booking-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .mb-card-icon-area {
+        width: 48px;
+        height: 48px;
+    }
+
+    .mb-card-icon {
+        font-size: 20px;
+    }
+
+    .mb-card-content {
+        width: 100%;
+    }
+
+    .mb-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 12px;
+        border-top: 1px solid #f3f4f6;
+        padding-top: 12px;
+    }
+
+    .mb-arrow-icon {
+        display: none;
+        /* Or move it to top right absolute */
+    }
+
+    /* Optional: Make current card status stick to top right? */
+    .mb-card-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
